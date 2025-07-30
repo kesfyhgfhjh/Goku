@@ -43,7 +43,7 @@ def start(message):
     add_user(message.from_user.id)
     markup = types.InlineKeyboardMarkup(row_width=1)  # Vertical layout
 
-    btn1 = types.InlineKeyboardButton("💥 1 Day TRIAL - ₹100", callback_data="plan_1")
+    btn1 = types.InlineKeyboardButton("💥 1 Day TRIAL - ₹50", callback_data="plan_1")
     btn2 = types.InlineKeyboardButton("🔥 7 Days - ₹400", callback_data="plan_5")
     btn3 = types.InlineKeyboardButton("🚀 30 Days - ₹1000", callback_data="plan_30")
 
@@ -56,7 +56,7 @@ def start(message):
         "🌟 **Welcome to BGMI SERVER FREEZE BOT!** 🎮\n\n"
         "⚡ **Get Premium Access to Unleash Your Power!**\n\n"
         "🎯 **Available Plans:**\n"
-        "➡️ **1 Day TRIAL** – Perfect to test – *₹100*\n"
+        "➡️ **1 Day TRIAL** – Perfect to test – *₹50*\n"
         "➡️ **7 Days** – Play non-stop – *₹400*\n"
         "➡️ **30 Days** – Best value for pros – *₹1000*\n\n"
         "👇 **Tap a plan below to proceed with payment.** ✅\n"
@@ -68,7 +68,7 @@ def start(message):
 @bot.callback_query_handler(func=lambda call: call.data.startswith("plan_"))
 def handle_plan(call):
     plan_data = {
-        "plan_1": ("💥 1 Day TRIAL", "₹100"),
+        "plan_1": ("💥 1 Day TRIAL", "₹50"),
         "plan_5": ("🔥 5 Days", "₹400"),
         "plan_30": ("🚀 30 Days", "₹1000")
     }
